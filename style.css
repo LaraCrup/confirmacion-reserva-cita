@@ -4,181 +4,271 @@
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.div-body{
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mensajeConfirmacion{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     margin: 5% 0;
     text-align: center;
+    width: 100%;
 }
 
-.div-texto{
+.contenidoMensajeConfirmacion{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     margin: 0 1.5%;
 }
 
-.div-titulo{
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-}
-
-.logo-tex{
-    width: 3vw;
-    margin-right: 2vw;
-}
-
-p{
+.contenidoMensajeConfirmacion p:first-child{
     font-weight: bold;
     font-size: 1.8rem;
-    height: auto;
 }
 
-.p-sub{
+.logoTex{
+    width: 2.5vw;
+    margin-right: 1.3vw;
+}
+
+.contenidoMensajeConfirmacion p{
     font-weight: 500;
     font-size: 1.2rem;
     margin-top: 3%;
 }
 
-.div-img-derecha{
-    width: auto;
+.operadoraConfirmacion{
+    width: 15vw;
     margin: 0 1.5%;
 }
 
-.img-operadora{
-    width: 15vw;
-}
-
-.contenedor-btns{
-    display: flex;
-    justify-content: center;
-}
-
-.seccion-btns{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.conocenos{
     width: 80%;
+    background-color: #2E0049;
+    border-radius: 2vw;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
 }
 
-a{
+.tituloConocenos{
     display: flex;
-    align-items: center;
+    align-items: baseline;
+}
+
+.conocenos p{
+    color: #f1f1f1;
+    font-size: 1.8rem;
+    margin-bottom: 2vw;
+    font-weight: 600;
+}
+
+.botonesConocenos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botonesConocenos a{
+    text-align: center;
     background-color: #D3245C;
-    border: #D3245C 2px solid;
-    padding: 0 1vw;
+    border: #D3245C 4px solid;
+    padding: 1vw 2vw;
     border-radius: 60px;
-    height: 6vh;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #f1f1f1;
-    margin: 1%;
-    margin-bottom: 3%;
+    width: 20%;
 }
 
-a:hover{
+.botonesConocenos a:hover{
     background-color:#E9E9E9;
-    border: #D3245C 2px solid;
+    border: #D3245C 4px solid;
     color: #D3245C;
     font-weight: 600;
 }
 
 
+@media screen and (max-width: 1500px) {
+    .botonesConocenos a{
+        font-size: 0.9rem;
+    }
+}
 
-@media screen and (max-width: 1000px) {
-    a{
-        font-size: 0.8rem;
+@media screen and (max-width: 1250px) {
+    .botonesConocenos a{
+        padding: 1vw 1vw;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .botonesConocenos a{
+        font-size: 0.7rem;
     }
 }
 
 @media screen and (max-width: 850px) {
-    p{
+    .contenidoMensajeConfirmacion p:first-child{
         font-size: 1.3rem;
     }
 
-    .p-sub{
+    .contenidoMensajeConfirmacion p{
         font-size: 1rem;
     }
-    
-    .seccion-btns{
-        width: 50%;
+
+    .conocenos{
+        width: 85%;
     }
 
-    a{
-        padding: 0 1.3vw;
-        border-radius: 80px;
+    .conocenos p{
+        font-size: 1.3rem;
+    }
+
+    .botonesConocenos a{
+        border: #D3245C 3px solid;
+    }
+
+    .botonesConocenos a:hover{
+        border: #D3245C 3px solid;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .contenidoMensajeConfirmacion p:first-child{
+        font-size: 1.1rem;
+    }
+    
+    .contenidoMensajeConfirmacion p {
+        font-size: 0.9rem;
+    }
+
+    .conocenos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75%;
+    }
+
+    .conocenos p{
+        font-size: 1.1rem;
+    }
+
+    .botonesConocenos{
+        flex-wrap: wrap;
+        width: 70%;
+    }
+
+    .botonesConocenos a{
+        width: 20vw;
+        margin: 1vw;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .div-body{
+    .mensajeConfirmacion{
         flex-direction: column
     }
     
-    p{
-        font-size: 1.3rem;
+    .operadoraConfirmacion{
+        width: 20vw;
+        margin: 2% auto;
     }
+}
 
-    .p-sub{
+@media screen and (max-width: 600px) {
+    .conocenos p{
         font-size: 1rem;
     }
 
-    .div-img-derecha{
-        width: auto;
-        margin: 2% auto;
-    }
-    
-    .img-operadora{
-        width: 20vw;
-    }
-    
-    .seccion-btns{
-        width: 70%;
+    .botonesConocenos a{
+        font-size: 0.5rem;
     }
 }
 
 @media screen and (max-width: 500px) {
-    p{
-        font-size: 1rem;
+    .contenidoMensajeConfirmacion p:first-child{
+        font-size: 0.9rem;
     }
 
-    .p-sub{
+    .contenidoMensajeConfirmacion p{
+        font-size: 0.7rem;
+    }
+
+    .conocenos p{
         font-size: 0.8rem;
     }
-    
-    a{
-        font-size: 0.8rem;
-        padding: 0 1.5vw;
-        border-radius: 100px;
+
+    .tituloConocenos{
+        justify-content: center;
+    }
+
+    .tituloConocenos p{
+        text-align: center;
+    }
+
+    .botonesConocenos{
+        width: 50%;
+        justify-content: center;
+    }
+
+    .botonesConocenos a{
+        width: 25vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .conocenos p{
+        font-size: 0.6rem;
     }
 }
 
 @media screen and (max-width: 400px) {
-    p{
+    .contenidoMensajeConfirmacion p:first-child{
         font-size: 0.7rem;
     }
 
-    .p-sub{
+    .contenidoMensajeConfirmacion p{
         font-size: 0.5rem;
     }
-    
-    a{
-        font-size: 0.5rem;
-        height: 4vh;
+}
+
+@media screen and (max-width: 350px) {
+    .botonesConocenos a{
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .conocenos p{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .conocenos p{
+        width: 55%;
+    }
+
+    .botonesConocenos a{
+        width: 35vw;
     }
 }
 
 @media screen and (max-width: 270px) {
-    p{
+    .contenidoMensajeConfirmacion p:first-child{
         font-size: 0.5rem;
     }
 
-    .p-sub{
+    .contenidoMensajeConfirmacion p{
         font-size: 0.3rem;
     }
     
